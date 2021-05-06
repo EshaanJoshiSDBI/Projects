@@ -4,8 +4,9 @@ import pyautogui
 import time
 
 resolution = (1920,1080)
+x = time.time()
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
-out = cv2.VideoWriter('output.avi',fourcc,20.0,(resolution))
+out = cv2.VideoWriter('vid%s.avi'%(x),fourcc,20.0,(resolution))
 fps = 60
 prev = 0
 while True:
